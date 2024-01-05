@@ -3,6 +3,9 @@ const LIMIT_Y = 200;
 window.addEventListener("load", ()=>{
   const btn = document.querySelector('.nobutton');
   
+  btn.addEventListener('click', ()=>{
+    alert('Has hecho trampas');
+  });
   btn.addEventListener('mouseover', moveButton);
   
   function moveButton(e){
@@ -22,5 +25,7 @@ window.addEventListener("load", ()=>{
     const rect = btn.getBoundingClientRect();
     const conflict = (mX > x && mY < (x + rect.width) &&
         mY > y && mY < (y + rect.height));
+    if (conflict)
+    return conflict;
   }
 });
