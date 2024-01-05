@@ -1,30 +1,75 @@
 <!DOCTYPE html>
- <html>
-   <head>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MePerdonas</title>
+    <style>
+        body {
+            background-color: #f0c0d8; /* Rosa pastel */
+            font-family: Arial, sans-serif;
+        }
+
+        .respuestas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .primera button {
+            background-color: #ffb6c1; /* Rosa claro */
+            color: #652e92; /* Morado oscuro */
+        }
+
+        .segunda button {
+            background-color: #c4a5e4; /* Morado claro */
+            color: #652e92; /* Morado oscuro */
+        }
+
+        #move-randomly {
+            position: relative;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #652e92; /* Morado oscuro */
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="respuestas">
+        <h1>Me perdonas?</h1>
         <div class="primera">
             <button>Si</button>
         </div>
         <div class="segunda" id="move-randomly">
-            <button >No</button>
+            <button>No</button>
         </div>
     </div>
+
+    <script>
+        window.onload = (() => {
+            let move = document.querySelector("#move-randomly");
+            move.addEventListener("mouseover", function (e) {
+                let min = 50;
+                move.style.left = (Math.random() * (window.screen.width - min) + min) + "px";
+                move.style.top = (Math.random() * (window.screen.height - min) + min) + "px";
+            });
+        })
+    </script>
 </body>
-<script>
-    window.onload = (()=>{
-        let move = document.querySelector("#move-randomly");
-        move.addEventListener("mouseover", function(e) {
-            console.log(move);
-            let min = 50;
-            move.style.position = "fixed";
-            move.style.left = (Math.random() * (window.screen.width - min) + min) + "px";
-            move.style.top = (Math.random() * (window.screen.height - min) + min) + "px";
-            
-        });
-    })
-</script>
+
 </html>
