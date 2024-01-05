@@ -1,13 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #btnSi, #btnNo {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #btnSi {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #btnNo {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #btnNo:hover {
+      position: relative;
+      left: calc(100vw - 120px);
+    }
+  </style>
 </head>
 <body>
-  <h1>¿Me perdonas?</h1>
-  <button id="yesButton">Sí</button>
-  <button id="noButton">No</button>
 
-  <script src="script.js"></script>
+<div class="container">
+  <h1>Me perdonas</h1>
+  <button id="btnSi" onclick="mostrarMensaje()">Sí</button>
+  <button id="btnNo" onclick="moverBoton()">No</button>
+</div>
+
+<script>
+  function mostrarMensaje() {
+    alert("Yo también te amo");
+  }
+
+  function moverBoton() {
+    alert("No puedes elegir 'No', presiona 'Sí' para el perdón.");
+  }
+</script>
+
 </body>
 </html>
