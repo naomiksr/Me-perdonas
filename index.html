@@ -1,71 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    #btnSi, #btnNo {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
-      transition: left 0.3s;
-    }
-
-    #btnSi {
-      background-color: #4CAF50;
-      color: white;
-    }
-
-    #btnNo {
-      background-color: #f44336;
-      color: white;
-    }
-
-    #btnNo:hover {
-      left: calc(100% - 120px);
-    }
-  </style>
+ <html>
+   <head>
+    <title>MePerdonas</title>
 </head>
+
 <body>
-
-<div class="container">
-  <h1>Me perdonas</h1>
-  <button id="btnSi" onclick="mostrarMensaje()">Sí</button>
-  <button id="btnNo">No</button>
-</div>
-
-<script>
-  function mostrarMensaje() {
-    alert("Yo también te amo");
-  }
-</script>
-
+    <div class="respuestas">
+        <div class="primera">
+            <button>Si</button>
+        </div>
+        <div class="segunda" id="move-randomly">
+            <button >No</button>
+        </div>
+    </div>
 </body>
+<script>
+    window.onload = (()=>{
+        let move = document.querySelector("#move-randomly");
+        move.addEventListener("mouseover", function(e) {
+            console.log(move);
+            let min = 50;
+            move.style.position = "fixed";
+            move.style.left = (Math.random() * (window.screen.width - min) + min) + "px";
+            move.style.top = (Math.random() * (window.screen.height - min) + min) + "px";
+            
+        });
+    })
+</script>
 </html>
