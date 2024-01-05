@@ -3,9 +3,6 @@ const LIMIT_Y = 200;
 window.addEventListener("load", ()=>{
   const btn = document.querySelector('.joker');
   
-  btn.addEventListener('click', ()=>{
-    alert('Has hecho trampas');
-  });
   btn.addEventListener('mouseover', moveButton);
   
   function moveButton(e){
