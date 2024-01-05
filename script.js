@@ -1,6 +1,4 @@
 var noButton = document.getElementById("noButton");
-var windowWidth = window.innerWidth;
-var windowHeight = window.innerHeight;
 var buttonWidth = noButton.offsetWidth;
 var buttonHeight = noButton.offsetHeight;
 var isMoving = false;
@@ -11,8 +9,11 @@ noButton.addEventListener("mouseenter", function() {
 
 function moveButton() {
   if (!isMoving) {
-    var xPos = Math.random() * (windowWidth - buttonWidth);
-    var yPos = Math.random() * (windowHeight - buttonHeight);
+    var windowWidth = window.innerWidth - buttonWidth;
+    var windowHeight = window.innerHeight - buttonHeight;
+
+    var xPos = Math.floor(Math.random() * windowWidth);
+    var yPos = Math.floor(Math.random() * windowHeight);
 
     noButton.style.top = yPos + "px";
     noButton.style.left = xPos + "px";
@@ -28,7 +29,6 @@ function moveButton() {
 document.addEventListener("mousemove", function(event) {
   var cursorX = event.clientX;
   var cursorY = event.clientY;
-
   var buttonRect = noButton.getBoundingClientRect();
 
   if (
@@ -39,6 +39,9 @@ document.addEventListener("mousemove", function(event) {
   ) {
     moveButton();
   }
+});
+
+moveButton();
 });
 
 moveButton();
