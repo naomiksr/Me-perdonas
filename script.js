@@ -17,12 +17,4 @@ window.addEventListener("load", ()=>{
     btn.style.top= newY + "px";
     btn.style.left= newX + "px";
   }
-  
-  function isMouseOverButton(mX,mY, x, y) {
-    const rect = btn.getBoundingClientRect();
-    const conflict = (mX > x && mY < (x + rect.width) &&
-        mY > y && mY < (y + rect.height));
-    if (conflict) { console.log("Habrá que mover de nuevo"); }
-    return conflict;
-  }
 });
