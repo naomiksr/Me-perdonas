@@ -2,7 +2,7 @@ var noButton = document.getElementById("noButton");
 var buttonWidth = noButton.offsetWidth;
 var buttonHeight = noButton.offsetHeight;
 
-noButton.addEventListener("mouseenter", function() {
+noButton.addEventListener("mouseover", function() {
   moveButton();
 });
 
