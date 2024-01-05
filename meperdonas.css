@@ -1,0 +1,28 @@
+#mensaje {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 20px;
+}
+
+#siButton {
+  float: left;
+}
+
+#noButton {
+  position: absolute;
+}
+
+#noButton:hover {
+  animation: moveButton 5s infinite;
+}
+
+@keyframes moveButton {
+  0% {top: 0; left: 0;}
+  25% {top: 0; left: calc(100% - 100px);}
+  50% {top: calc(100% - 50px); left: calc(100% - 100px);}
+  75% {top: calc(100% - 50px); left: 0;}
+  100% {top: 0; left: 0;}
+}
