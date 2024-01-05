@@ -71,8 +71,10 @@
             let move = document.querySelector("#move-randomly");
             move.addEventListener("mouseover", function (e) {
                 let min = 50;
-                move.style.left = (Math.random() * (window.innerWidth - min) + min) + "px";
-                move.style.top = (Math.random() * (window.innerHeight - min) + min) + "px";
+                let maxX = window.innerWidth - min;
+                let maxY = window.innerHeight - min;
+                move.style.left = Math.random() * maxX + "px";
+                move.style.top = Math.random() * maxY + "px";
             });
         })
     </script>
