@@ -21,6 +21,7 @@
       border-radius: 10px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     h1 {
@@ -34,7 +35,7 @@
       margin: 10px;
       border: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: left 0.3s;
     }
 
     #btnSi {
@@ -48,8 +49,7 @@
     }
 
     #btnNo:hover {
-      position: relative;
-      left: calc(100vw - 120px);
+      left: calc(100% - 120px);
     }
   </style>
 </head>
@@ -58,16 +58,12 @@
 <div class="container">
   <h1>Me perdonas</h1>
   <button id="btnSi" onclick="mostrarMensaje()">Sí</button>
-  <button id="btnNo" onclick="moverBoton()">No</button>
+  <button id="btnNo">No</button>
 </div>
 
 <script>
   function mostrarMensaje() {
     alert("Yo también te amo");
-  }
-
-  function moverBoton() {
-    alert("No puedes elegir 'No', presiona 'Sí' para el perdón.");
   }
 </script>
 
