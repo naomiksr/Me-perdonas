@@ -1,7 +1,7 @@
 const LIMIT_X = 300;
 const LIMIT_Y = 200;
 window.addEventListener("load", ()=>{
-  const btn = document.querySelector('.joker');
+  const btn = document.querySelector('.nobutton');
   
   btn.addEventListener('mouseover', moveButton);
   
