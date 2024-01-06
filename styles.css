@@ -1,0 +1,32 @@
+body {
+    background-color: #FCE4EC; /* Tonos rosados pastel */
+    text-align: center; /* Centra el contenido */
+    font-family: 'Arial', sans-serif; /* Fuente más legible */
+    color: #333; /* Color de texto más oscuro */
+}
+
+h1 {
+    color: #E91E63; /* Nuevo color para el encabezado */
+    font-size: 70px;
+}
+
+.siButton {
+    background-color: #FFCDD2; /* Tonos rosados pastel */
+    padding: 10px;
+    font-size: 70px;
+    margin-top: 20px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border: none; /* Elimina el borde del botón */
+}
+
+.siButton:hover {
+    background-color: #F8BBD0; /* Cambia el color al pasar por encima */
+}
+
+.nonbutton {
+    background-color: #FFCDD2; /* Tonos rosados pastel */
+    padding: 10px;
+    font-size: 70px;
+    margin-top: 20px;
+    border: none; /* Elimina el borde del botón */
+}
